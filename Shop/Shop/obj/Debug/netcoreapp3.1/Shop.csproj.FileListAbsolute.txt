@@ -16,7 +16,6 @@ C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Shop.TagHelpers.input.cache
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Shop.TagHelpers.output.cache
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Shop.RazorCoreGenerate.cache
-C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Products\List.cshtml.g.cs
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
@@ -75,3 +74,4 @@ C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Shop.dll
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Shop.pdb
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Shop.genruntimeconfig.cache
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs

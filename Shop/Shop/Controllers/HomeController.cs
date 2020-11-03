@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace Shop.Controllers
 {
-    public class ProductsController : Controller
+    public class HomeController : Controller
     {
         private readonly IAllProducts _products;
         private readonly IAllProducts _categories;
 
-        public ProductsController(IAllProducts products, IAllProducts categories)
+        public HomeController(IAllProducts products, IAllProducts categories)
         {
             _products = products;
             _categories = categories;
         }
 
-        public ViewResult List()
+        public ViewResult Index()
         {
             ProductsListViewModel obj = new ProductsListViewModel();
             obj.AllProducts = _products.Products;
