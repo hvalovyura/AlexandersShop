@@ -1,0 +1,10 @@
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\bin\Debug\netcoreapp3.1\Shop.exe
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Shop.csprojAssemblyReference.cache
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Shop.AssemblyInfoInputs.cache
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Shop.AssemblyInfo.cs
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Shop.RazorTargetAssemblyInfo.cache
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\staticwebassets\Shop.StaticWebAssets.Manifest.cache
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\staticwebassets\Shop.StaticWebAssets.xml
