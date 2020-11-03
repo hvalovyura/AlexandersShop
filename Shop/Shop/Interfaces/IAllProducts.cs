@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Shop.Interfaces
 {
-    interface IAllProducts
+    public interface IAllProducts
     {
-        IEnumerable<Product> Products { get; set; }
+        IEnumerable<Product> Products { get; }
         Product GetObjectProduct(int id);
     }
 }
