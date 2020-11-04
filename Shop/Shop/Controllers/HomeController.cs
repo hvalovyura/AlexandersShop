@@ -13,9 +13,9 @@ namespace Shop.Controllers
     public class HomeController : Controller
     {
         private readonly IAllProducts _products;
-        private readonly IAllProducts _categories;
+        private readonly IProductsCategory _categories;
 
-        public HomeController(IAllProducts products, IAllProducts categories)
+        public HomeController(IAllProducts products, IProductsCategory categories)
         {
             _products = products;
             _categories = categories;
@@ -39,15 +39,7 @@ namespace Shop.Controllers
             }
             else
             {
-                if(string.Equals("Category1", category, StringComparison.OrdinalIgnoreCase))
-                {
-                    products = _products.Products.Where(i => i.Category.Name.Equals("Category1")).OrderBy(i => i.Id);
-                }
-                else if (string.Equals("Category2", category, StringComparison.OrdinalIgnoreCase))
-                {
-                    products = _products.Products.Where(i => i.Category.Name.Equals("Category2")).OrderBy(i => i.Id);
-                }
-
+                products = _products.Products.Where(i => i.Category.Name.Equals(_category)).OrderBy(i => i.Id);
                 currCategory = _category;
             }
 
