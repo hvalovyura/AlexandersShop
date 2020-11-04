@@ -87,5 +87,25 @@ namespace Shop.Controllers
             _content.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ActionResult CreateCategory()
+        {
+            var productObj = new ProductsListViewModel
+            {
+                AllProducts = _products.Products,
+                AllCategories = _categories.AllCategories,
+                CurrentCategory = ""
+            };
+            return View(productObj);
+        }
+
+        [HttpPost]
+        public ActionResult CreateCategory(Category category)
+        {
+            _content.Category.Add(category);
+            _content.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
