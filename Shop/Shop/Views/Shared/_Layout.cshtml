@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, TagHelpersApp
+
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -25,9 +28,9 @@
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <form class="form-inline mt-2 mt-md-0" asp-controller="Home" asp-action="List">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="searchString">
+                <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Поиск" />
             </form>
         </div>
     </nav>

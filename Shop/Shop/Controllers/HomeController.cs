@@ -32,8 +32,9 @@ namespace Shop.Controllers
 
         [Route("/List")]
         [Route("/List/{category}")]
-        public ViewResult List(string category)
+        public ActionResult List(string category, string searchString)
         {
+            ViewBag.String = "Все товары.";
             string _category = category;
             IEnumerable<Product> products = null;
             string currCategory = "";
@@ -43,6 +44,7 @@ namespace Shop.Controllers
             }
             else
             {
+                ViewBag.String = $" Категория - {category}. ";
                 products = _products.Products.Where(i => i.Category.Name.Equals(_category)).OrderBy(i => i.Id);
                 currCategory = _category;
             }
@@ -53,6 +55,12 @@ namespace Shop.Controllers
                 AllCategories = _categories.AllCategories,
                 CurrentCategory = currCategory
             };
+            if(!string.IsNullOrEmpty(searchString))
+            {
+                ViewBag.String += $" Поиск по запросу \"{searchString}\"";
+                productObj.AllProducts = productObj.AllProducts.Where(x => x.Name.ToLower().Contains(searchString.ToLower()));
+                ViewBag.String += productObj.AllProducts.Count() == 0 ? "не дал результатов." : ".";
+            }
 
             return View(productObj);
         }
