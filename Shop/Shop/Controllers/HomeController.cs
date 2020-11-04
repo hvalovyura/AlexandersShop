@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Shop.Data;
 using Shop.Interfaces;
@@ -7,6 +9,7 @@ using Shop.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,12 +20,18 @@ namespace Shop.Controllers
         private readonly IAllProducts _products;
         private readonly IProductsCategory _categories;
         private readonly AppDBContent _content;
+        private readonly IWebHostEnvironment _environment;
 
-        public HomeController(IAllProducts products, IProductsCategory categories, AppDBContent content)
+        public HomeController(IAllProducts products,
+            IProductsCategory categories,
+            AppDBContent content,
+            IWebHostEnvironment environment
+            )
         {
             _products = products;
             _categories = categories;
             _content = content;
+            _environment = environment;
         }
 
         public ActionResult Index()
@@ -80,9 +89,15 @@ namespace Shop.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreateProduct(Product product, int categoryId)
+        public ActionResult CreateProduct(Product product, int categoryId, IFormFile uploadedFile)
         {
+            string path = "/img/" + uploadedFile.FileName;
+            using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.CreateNew))
+            {
+                uploadedFile.CopyTo(fileStream);
+            }
             product.Category = _categories.AllCategories.Where(x => x.Id == categoryId).FirstOrDefault();
+            product.ImagePath = $"{path}";
             _content.Product.Add(product);
             _content.SaveChanges();
             return RedirectToAction("Index");

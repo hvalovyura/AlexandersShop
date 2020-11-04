@@ -1,4 +1,7 @@
-﻿<form method="post" action="CreateProduct">
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, TagHelpersApp
+
+<form method="post" asp-controller="Home" asp-action="CreateProduct" enctype="multipart/form-data">
     <p>Введите название</p>
     <input type="text" name="Name" placeholder="Имя" />
     <p>Введите описание</p>
@@ -13,6 +16,6 @@
         }
     </select>
     <p>Прикрепите изображение</p>
-    <input type="text" name="ImagePath" placeholder="Изображение" />
+    <input type="file" name="uploadedFile" />
     <input type="submit" value="Отправить" />
 </form>
