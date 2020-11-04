@@ -9,6 +9,7 @@ namespace Shop.ViewModels
     public class ProductsListViewModel
     {
         public IEnumerable<Product> AllProducts { get; set; }
+        public IEnumerable<Category> AllCategories { get; set; }
         public string CurrentCategory { get; set; }
     }
 }

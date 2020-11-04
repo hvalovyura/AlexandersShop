@@ -46,6 +46,7 @@ namespace Shop.Controllers
             var productObj = new ProductsListViewModel
             {
                 AllProducts = products,
+                AllCategories = _categories.AllCategories,
                 CurrentCategory = currCategory
             };
 
