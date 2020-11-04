@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Shop.Interfaces;
+using Shop.Models;
 using Shop.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -19,12 +21,43 @@ namespace Shop.Controllers
             _categories = categories;
         }
 
-        public ViewResult Index()
+        public ActionResult Index()
         {
-            ProductsListViewModel obj = new ProductsListViewModel();
-            obj.AllProducts = _products.Products;
-            obj.CurrentCategory = "Category1";
-            return View(obj);
+            return Redirect("/List");
+        }
+
+        [Route("/List")]
+        [Route("/List/{category}")]
+        public ViewResult List(string category)
+        {
+            string _category = category;
+            IEnumerable<Product> products = null;
+            string currCategory = "";
+            if(string.IsNullOrEmpty(category))
+            {
+                products = _products.Products.OrderBy(i => i.Id);
+            }
+            else
+            {
+                if(string.Equals("Category1", category, StringComparison.OrdinalIgnoreCase))
+                {
+                    products = _products.Products.Where(i => i.Category.Name.Equals("Category1")).OrderBy(i => i.Id);
+                }
+                else if (string.Equals("Category2", category, StringComparison.OrdinalIgnoreCase))
+                {
+                    products = _products.Products.Where(i => i.Category.Name.Equals("Category2")).OrderBy(i => i.Id);
+                }
+
+                currCategory = _category;
+            }
+
+            var productObj = new ProductsListViewModel
+            {
+                AllProducts = products,
+                CurrentCategory = currCategory
+            };
+
+            return View(productObj);
         }
     }
 }
