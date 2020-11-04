@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Shop.Data;
 using Shop.Interfaces;
 using Shop.Models;
 using Shop.ViewModels;
@@ -14,11 +16,13 @@ namespace Shop.Controllers
     {
         private readonly IAllProducts _products;
         private readonly IProductsCategory _categories;
+        private readonly AppDBContent _content;
 
-        public HomeController(IAllProducts products, IProductsCategory categories)
+        public HomeController(IAllProducts products, IProductsCategory categories, AppDBContent content)
         {
             _products = products;
             _categories = categories;
+            _content = content;
         }
 
         public ActionResult Index()
@@ -51,6 +55,29 @@ namespace Shop.Controllers
             };
 
             return View(productObj);
+        }
+
+        [HttpGet]
+        public ActionResult CreateProduct()
+        {
+            var productObj = new ProductsListViewModel
+            {
+                AllProducts = _products.Products,
+                AllCategories = _categories.AllCategories,
+                CurrentCategory = ""
+            };
+            SelectList cat = new SelectList(_content.Category, "Id", "Name");
+            ViewBag.Categories = cat;
+            return View(productObj);
+        }
+
+        [HttpPost]
+        public ActionResult CreateProduct(Product product, int categoryId)
+        {
+            product.Category = _categories.AllCategories.Where(x => x.Id == categoryId).FirstOrDefault();
+            _content.Product.Add(product);
+            _content.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

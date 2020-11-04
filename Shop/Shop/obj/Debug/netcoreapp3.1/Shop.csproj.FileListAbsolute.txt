@@ -76,3 +76,4 @@ C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Shop.genruntimeconfig.cache
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Home\List.cshtml.g.cs
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Home\CreateProduct.cshtml.g.cs

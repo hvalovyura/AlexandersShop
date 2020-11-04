@@ -1,0 +1,18 @@
+﻿<form method="post" action="CreateProduct">
+    <p>Введите название</p>
+    <input type="text" name="Name" placeholder="Имя" />
+    <p>Введите описание</p>
+    <input type="text" name="Description" placeholder="Описание" />
+    <p>Выберите категорию</p>
+    <select id="CategoryId" name="CategoryId">
+        @{
+            foreach (var el in Model.AllCategories)
+            {
+                <option value="@el.Id">@el.Name</option>
+            }
+        }
+    </select>
+    <p>Прикрепите изображение</p>
+    <input type="text" name="ImagePath" placeholder="Изображение" />
+    <input type="submit" value="Отправить" />
+</form>
