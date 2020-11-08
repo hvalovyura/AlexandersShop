@@ -74,6 +74,22 @@ namespace Shop.Controllers
             return View(productObj);
         }
 
+        [Route("/ProductPage/{id}")]
+        public ActionResult ProductPage(int id)
+        {
+            IEnumerable<Product> products = null;
+            Product product = _products.Products.Where(o => o.Id == id).FirstOrDefault();
+            products = _products.Products.Where(o => o.Id == id);
+            var productObj = new ProductsListViewModel
+            {
+                AllProducts = products,
+                AllCategories = _categories.AllCategories,
+                CurrentCategory = ""
+            };
+
+            return View(productObj);
+        }
+
         [HttpGet]
         public ActionResult CreateProduct()
         {

@@ -19,8 +19,15 @@ using Shop.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\Views\_ViewImports.cshtml"
+using Shop.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3c0c518a89af3186ef88c88f95e74ff78c67edfd", @"/Views/Home/CreateProduct.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8698b1ec29562463bc33480ac52eac0346944c13", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"456e1b25da505bb8b19af1a050b535d007413a5b", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_CreateProduct : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("method", "post", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -54,7 +61,7 @@ using Shop.ViewModels;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c0c518a89af3186ef88c88f95e74ff78c67edfd4473", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c0c518a89af3186ef88c88f95e74ff78c67edfd4655", async() => {
                 WriteLiteral(@"
     <p>Введите название</p>
     <input type=""text"" name=""Name"" placeholder=""Имя"" />
@@ -73,7 +80,7 @@ using Shop.ViewModels;
 #line hidden
 #nullable disable
                 WriteLiteral("                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c0c518a89af3186ef88c88f95e74ff78c67edfd5309", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3c0c518a89af3186ef88c88f95e74ff78c67edfd5491", async() => {
 #nullable restore
 #line 14 "C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\Views\Home\CreateProduct.cshtml"
                                   Write(el.Name);

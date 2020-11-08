@@ -1,0 +1,8 @@
+﻿@foreach (var el in Model.AllProducts)
+{
+    <div>
+        <h2>@el.Name</h2>
+        <img class="img-thumbnail" src="@el.ImagePath" />
+        <h1>@el.Description</h1>
+    </div>
+}

@@ -18,9 +18,6 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="~/CreateProduct">Создать продукт</a>
                 </li>
@@ -34,20 +31,22 @@
             </form>
         </div>
     </nav>
-    <div class="left-container">
-        <ul class="navbar-nav mr-auto">
-            @{
-                foreach (var el in Model.AllCategories)
-                {
-                    <li class="nav-item">
-                        <a class="nav-link" href="~/List/@el.Name">@el.Name</a>
-                    </li>
+    <div class="row">
+        <div class="left-container">
+            <ul class="navbar-nav mr-auto">
+                @{
+                    foreach (var el in Model.AllCategories)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="~/List/@el.Name">@el.Name</a>
+                        </li>
+                    }
                 }
-            }
-        </ul>
-    </div>
-    <div class="mt-5">
-        @RenderBody()
+            </ul>
+        </div>
+        <div class="col">
+            @RenderBody()
+        </div>
     </div>
     <footer class="container">
         <p class="float-right"><a href="#">Back to top</a></p>

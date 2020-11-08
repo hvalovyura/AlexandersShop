@@ -1,4 +1,5 @@
-﻿@ViewBag.String
+﻿
+@ViewBag.String
 <div class="row mt-5 mb-2">
     @{
         foreach (var product in Model.AllProducts)
@@ -6,6 +7,7 @@
             <div class="col-lg-4">
                 <img class="img-thumbnail" src="@product.ImagePath" />
                 <h2>@product.Name</h2>
+                <a class="nav-link" href="~/ProductPage/@product.Id">@product.Name</a>
             </div>
         }
     }
