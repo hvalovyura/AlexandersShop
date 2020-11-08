@@ -11,3 +11,38 @@ nav {
     height: 100vh;
     text-align: center;
 }
+
+.widget-container {
+    position: fixed;
+    width: 235px !important;
+    height: 40px !important;
+    bottom: 20px;
+    right: 20px;
+    background-color: forestgreen !important;
+    box-shadow: 0px 4px 12px rgba(223, 23, 20, 0.2) !important;
+    border-radius: 30px !important;
+}
+
+.widget-button-icon {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    background-position-y: 10px;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+
+.widget-button {
+    position: absolute;
+    width: 235px !important;
+    height: 40px !important;
+    background-color: forestgreen !important;
+    box-shadow: 0px 4px 12px rgba(223, 23, 20, 0.2) !important;
+    border-radius: 30px !important;
+}
