@@ -79,3 +79,4 @@ C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Home\CreateProduct.cshtml.g.cs
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Home\CreateCategory.cshtml.g.cs
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Home\ProductPage.cshtml.g.cs
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs

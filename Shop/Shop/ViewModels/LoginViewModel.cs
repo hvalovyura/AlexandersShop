@@ -1,5 +1,4 @@
-﻿using Shop.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace Shop.ViewModels
 {
-    public class ProductsListViewModel
+    public class LoginViewModel
     {
-        public IEnumerable<Product> AllProducts { get; set; }
-        public IEnumerable<Category> AllCategories { get; set; }
-        public string CurrentCategory { get; set; }
-
-        [Required(ErrorMessage = "Не указан Login")]
+        [Required(ErrorMessage = "Не указан Email")]
         public string Login { get; set; }
 
         [Required(ErrorMessage = "Не указан пароль")]

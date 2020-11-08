@@ -38,6 +38,18 @@ namespace Shop.Data
                     );
             }
 
+            if(!content.Users.Any())
+            {
+                content.AddRange
+                    (
+                        new User
+                        {
+                            Login = "AlexSobol",
+                            Password = "Password_For_Alex_Sobol_1"
+                        }
+                    );
+            }
+
             content.SaveChanges();
         }
         private static Dictionary<string, Category> category;

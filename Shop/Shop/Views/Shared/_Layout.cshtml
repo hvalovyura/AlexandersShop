@@ -17,19 +17,28 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="~/CreateProduct">Создать продукт</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="~/CreateCategory">Создать категорию</a>
-                </li>
-            </ul>
-            <form class="form-inline mt-2 mt-md-0" asp-controller="Home" asp-action="List">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="searchString">
-                <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Поиск" />
-            </form>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <ul class="navbar-nav mr-auto row">
+                    <li class="nav-item col">
+                        <a class="nav-link" href="~/CreateProduct">Создать продукт</a>
+                    </li>
+                    <li class="nav-item col">
+                        <a class="nav-link" href="~/CreateCategory">Создать категорию</a>
+                    </li>
+                    <li class="nav-item col dropri">
+                        <a class="nav-link" href="/">Welcome, Administrator</a>
+                    </li>
+                    <li class="nav-item col dropright">
+                        <a class="nav-link" asp-action="Logout" asp-controller="Account">logout</a>
+                    </li>
+                </ul>
+             }
         </div>
+        <form class="form-inline mt-2 mt-md-0 dropright" asp-controller="Home" asp-action="List">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="searchString">
+            <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Поиск" />
+        </form>
     </nav>
     <div class="row">
         <div class="left-container">
