@@ -5,9 +5,9 @@
 
 <form method="post" asp-controller="Home" asp-action="CreateProduct" enctype="multipart/form-data">
     <p>Введите название</p>
-    <input type="text" name="Name" placeholder="Имя" />
+    <input type="text" name="Name" placeholder="Имя" size="100" />
     <p>Введите описание</p>
-    <input type="text" name="Description" placeholder="Описание" />
+    <textarea type="text" name="Description" placeholder="Описание" rows="6" cols="100"></textarea>
     <p>Выберите категорию</p>
     <select id="CategoryId" name="CategoryId">
         @{

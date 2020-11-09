@@ -11,14 +11,16 @@
     <link href="~/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-md">
-        <a class="navbar-brand" href="~/List">GiveMeName</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            @if (User.Identity.IsAuthenticated)
-            {
+    @if (!Url.PageLink().Contains("Message/CompareMessage"))
+    {
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="~/List">GiveMeName</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                @if (User.Identity.IsAuthenticated)
+                {
                 <ul class="navbar-nav mr-auto row">
                     <li class="nav-item col">
                         <a class="nav-link" href="~/CreateProduct">Создать продукт</a>
@@ -26,50 +28,60 @@
                     <li class="nav-item col">
                         <a class="nav-link" href="~/CreateCategory">Создать категорию</a>
                     </li>
-                    <li class="nav-item col dropri">
+                    <li class="nav-item col">
+                        <a class="nav-link" href="~/Message/ShowMessages">Посмотреть все сообщения</a>
+                    </li>
+                    <li class="nav-item col dropright">
                         <a class="nav-link" href="/">Welcome, Administrator</a>
                     </li>
                     <li class="nav-item col dropright">
                         <a class="nav-link" asp-action="Logout" asp-controller="Account">logout</a>
                     </li>
                 </ul>
-             }
-        </div>
-        <form class="form-inline mt-2 mt-md-0 dropright" asp-controller="Home" asp-action="List">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="searchString">
-            <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Поиск" />
-        </form>
-    </nav>
-    <div class="row">
-        <div class="left-container">
-            <ul class="navbar-nav mr-auto">
-                @{
-                    foreach (var el in Model.AllCategories)
-                    {
-                        <li class="nav-item">
-                            <a class="nav-link" href="~/List/@el.Name">@el.Name</a>
-                        </li>
-                    }
                 }
-            </ul>
-        </div>
+            </div>
+            <form class="form-inline mt-2 mt-md-0 dropright" asp-controller="Home" asp-action="List">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="searchString">
+                <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Поиск" />
+            </form>
+        </nav>
+    }
+    <div class="row">
+        @if (!Url.PageLink().Contains("Message"))
+        {
+            <div class="left-container">
+                <ul class="navbar-nav mr-auto">
+                    @{
+                        foreach (var el in Model.AllCategories)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/List/@el.Name">@el.Name</a>
+                            </li>
+                        }
+                    }
+                </ul>
+            </div>
+        }
         <div class="col">
             @RenderBody()
         </div>
     </div>
-    <a id="close-button">
-        <i id="close-button-text">X</i>
-    </a>
-    <iframe src="https://tut.by" id="widget-frame"></iframe>
-    <div class="widget-container">
-        <a id="widget-button" class="widget-button">
-            <i class="widget-button-icon">Напишите нам</i>
+    @if (!Url.PageLink().Contains("Message/CompareMessage"))
+    {
+        <a id="close-button">
+            <i id="close-button-text">X</i>
         </a>
-    </div>
-    <footer class="container">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>© 2020 All Rights Reserved</p>
-    </footer>
+        <iframe src="~/Message/CompareMessage" id="widget-frame"></iframe>
+        <div class="widget-container">
+            <a id="widget-button" class="widget-button">
+                <i class="widget-button-icon">Напишите нам</i>
+            </a>
+        </div>
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>© 2020 All Rights Reserved</p>
+        </footer>
+    }
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/script.js"></script>
 </body>

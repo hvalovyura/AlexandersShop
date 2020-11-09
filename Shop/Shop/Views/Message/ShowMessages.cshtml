@@ -1,0 +1,21 @@
+﻿
+@model MessageViewModel
+
+<div class="row mt-5 mb-2">
+    @{
+        if (Model.AllMessages != null)
+        {
+            foreach (var message in Model.AllMessages)
+            {
+                <div style="text-align: center">
+                    <h3>@message.Phone</h3>
+                    <h6>>@message.Text</h6>
+                </div>
+            }
+        }
+        else
+        {
+            <h2>Список пуст</h2>
+        }
+    }
+</div>
