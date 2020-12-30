@@ -111,7 +111,7 @@ namespace Shop.Controllers
         [HttpPost]
         public ActionResult CreateProduct(Product product, int categoryId, IFormFile uploadedFile)
         {
-            string path = "/img/" + uploadedFile.FileName;
+            string path = $"/img/{DateTime.Now.ToString("yyyyMMddHHmmss")}.jpg";
             using (var fileStream = new FileStream(_environment.WebRootPath + path, FileMode.CreateNew))
             {
                 uploadedFile.CopyTo(fileStream);
