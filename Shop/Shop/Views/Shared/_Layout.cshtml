@@ -50,16 +50,18 @@
         @if (!Url.PageLink().Contains("Message"))
         {
             <div class="left-container">
-                <ul class="navbar-nav mr-auto">
-                    @{
-                        foreach (var el in Model.AllCategories)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link" href="~/List/@el.Name">@el.Name</a>
-                            </li>
+                <div class="category-list">
+                    <ul class="navbar-nav mr-auto">
+                        @{
+                            foreach (var el in Model.AllCategories)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" href="~/List/@el.Name">@el.Name</a>
+                                </li>
+                            }
                         }
-                    }
-                </ul>
+                    </ul>
+                </div>                
             </div>
         }
         <div class="col">

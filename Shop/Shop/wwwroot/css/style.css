@@ -84,3 +84,12 @@ nav {
     direction: ltr;
     display: inline-block;
 }
+
+a {
+    color: black !important;
+}
+
+li:hover {
+    background: #ffd800 !important;
+    color: red !important;
+}
