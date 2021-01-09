@@ -56,5 +56,13 @@ namespace Shop.Controllers
 
             return View(messagesObj);
         }
+
+        [HttpPost]
+        public IActionResult RemoveMessage(int? id)
+        {
+            db.Messages.Remove(db.Messages.Where(m => m.Id == id).FirstOrDefault());
+            db.SaveChanges();
+            return RedirectToAction("ShowMessages");
+        }
     }
 }
