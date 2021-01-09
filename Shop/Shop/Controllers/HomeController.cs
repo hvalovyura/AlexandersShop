@@ -142,5 +142,13 @@ namespace Shop.Controllers
             _content.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public ActionResult RemoveProduct(int? id)
+        {
+            _content.Product.Remove(_content.Product.Where(el => el.Id == id).FirstOrDefault());
+            _content.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
