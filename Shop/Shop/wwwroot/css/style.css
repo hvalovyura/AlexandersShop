@@ -2,14 +2,40 @@
     background: #fcfcfc;
 }
 nav {
+    position: fixed !important;
+    height: 10% !important;
+    width: 100% !important;
     background: #00ff21;
+    outline: 2px solid #000 !important;
+    z-index: 5;
 }
 .left-container {
+    position: fixed !important;    
+    bottom: 0px;
+    left: 0px;
     float: left;
+    height: 90%;
     width: 200px;
     background: #00ff21;
-    height: 100vh;
     text-align: center;
+    box-sizing: inherit;
+    outline: 2px solid #000 !important;
+}
+
+.content-page {
+    display: flex;
+    left: 210px;
+    top: 100px;
+    bottom: 50px;
+}
+
+.content-page span {
+    position: absolute;
+}
+
+.content-page img {
+    width: 400px;
+    height: 400px;
 }
 
 .widget-container {
@@ -92,4 +118,25 @@ a {
 li:hover {
     background: #ffd800 !important;
     color: red !important;
+}
+
+.contact-information {
+    outline: 2px solid #000 !important;
+    position: relative;
+}
+
+.category-list {
+    outline: 2px solid #000 !important;
+    position: relative;
+    height: 64vh;
+}
+
+footer {
+    display: none;
+    position: absolute;
+    left: 200px;
+}
+
+.img-thumbnail {
+    max-width: none !important;
 }
