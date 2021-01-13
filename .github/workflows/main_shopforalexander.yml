@@ -24,7 +24,7 @@ jobs:
       run: dotnet build --configuration Release
 
     - name: dotnet publish
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/Shop
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
@@ -32,4 +32,4 @@ jobs:
         app-name: 'shopforalexander'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_e0d68f65e54845b1893290a7036837af }}
-        package: ${{env.DOTNET_ROOT}}/myapp 
+        package: ${{env.DOTNET_ROOT}}/Shop 
