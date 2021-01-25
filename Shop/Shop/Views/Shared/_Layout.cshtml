@@ -46,41 +46,51 @@
             </form>
         </nav>
     }
-    <div class="row">
-        @if (!Url.PageLink().Contains("Message"))
-        {
-            <div class="left-container">
-                <div class="category-list">
-                    <ul class="navbar-nav mr-auto">
-                        @{
-                            foreach (var el in Model.AllCategories)
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link" href="~/List/@el.Name">@el.Name</a>
-                                </li>
-                            }
+<div class="row">
+    @if (!Url.PageLink().Contains("Message"))
+    {
+        <div class="left-container">
+            <div class="category-list">
+                <ul class="navbar-nav mr-auto">
+                    @{
+                        foreach (var el in Model.AllCategories)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/List/@el.Name">@el.Name</a>
+                            </li>
                         }
-                    </ul>
-                </div>
-                <div class="contact-information">
-                    <h3>Контакты</h3>
-                    <h5>Телефон</h5>
-                    <h5>+37529xxxxxxx</h5>
-                    <h5>email</h5>
-                    <h5>sobol@mail.ru</h5>
-                </div>
+                    }
+                </ul>
             </div>
-        }
+            <div class="contact-information">
+                <h3>Контакты</h3>
+                <h5>Телефон</h5>
+                <h5>+37529xxxxxxx</h5>
+                <h5>email</h5>
+                <h5>sobol@mail.ru</h5>
+            </div>
+        </div>
+    }
+    @if (!Url.PageLink().Contains("Message/CompareMessage"))
+    {
         <div class="content-page col">
             @RenderBody()
         </div>
-    </div>
+    }
+    else
+    {
+        <div class="message-page col">
+            @RenderBody()
+        </div>
+    }
+
+</div>
     @if (!Url.PageLink().Contains("Message/CompareMessage"))
     {
         <a id="close-button">
             <i id="close-button-text">X</i>
         </a>
-        <iframe src="~/Message/CompareMessage" id="widget-frame"></iframe>
+        <iframe src="~/Message/CompareMessage" id="widget-frame" scrolling="no"></iframe>
         <div class="widget-container">
             <a id="widget-button" class="widget-button">
                 <i class="widget-button-icon">Напишите нам</i>

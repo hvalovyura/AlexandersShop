@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Shop.Data;
 using Shop.Interfaces;
-using Shop.Migrations;
 using Shop.Models;
 using Shop.ViewModels;
 using System;

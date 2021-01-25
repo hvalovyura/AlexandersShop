@@ -10,8 +10,8 @@ using Shop.Data;
 namespace Shop.Migrations
 {
     [DbContext(typeof(AppDBContent))]
-    [Migration("20201109023827_messages")]
-    partial class messages
+    [Migration("20210125173849_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
