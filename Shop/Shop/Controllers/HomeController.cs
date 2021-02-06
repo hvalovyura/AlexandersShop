@@ -40,7 +40,7 @@ namespace Shop.Controllers
 
         public ActionResult Index()
         {
-            return Redirect("/List");
+            return View();
         }
 
         [Route("/List")]

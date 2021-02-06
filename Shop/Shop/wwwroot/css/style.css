@@ -1,5 +1,12 @@
-﻿body {
+﻿#main-page-body {
     background: #fcfcfc;
+    background-image: url("../img/index-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#main-page-photo {
+    height: 100vh !important;
+    width: 100vh !important;
 }
 nav {
     position: fixed !important;
