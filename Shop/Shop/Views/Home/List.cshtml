@@ -16,7 +16,7 @@
                     </form>
                 }
             </div>
-            <div id="category-products-list-@category.Id" style="display:none">
+            <div class="category-product-list" id="category-products-list-@category.Id" style="display:none">
                 @foreach (var product in Model.AllProducts)
                 {
                     if (product.Category == category)

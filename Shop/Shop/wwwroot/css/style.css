@@ -5,9 +5,11 @@ nav {
     position: fixed !important;
     height: 10% !important;
     width: 100% !important;
-    background: #00ff21;
-    outline: 2px solid #000 !important;
+    background-color: #373a3c;
     z-index: 5;
+}
+nav a {
+    color: white !important;
 }
 .left-container {
     position: fixed !important;    
@@ -25,9 +27,8 @@ nav {
 iframe .content-page {
     left: 0px !important;
 }
-
 .content-page {
-    margin-left: 200px;
+    margin-left: 190px;
     margin-right: 200px;
     top: 100px;
     bottom: 50px;
@@ -42,7 +43,10 @@ iframe .content-page {
     outline: 2px solid #000;
     margin-bottom: 10px;
 }
-
+.messages-container li {
+    white-space: pre-line;
+    outline: 2px solid #000;
+}
 .product-item-name {
     white-space: pre-line;
     display: flex;
@@ -114,15 +118,19 @@ iframe .content-page {
 #widget-frame {
     position: fixed;
     width: 350px;
-    height: 70vh;
+    height: 520px;
     bottom: 20px;
     right: 20px;
     display: none;
 }
 
+.message-page {
+    margin-left: 25px !important;
+}
+
 #close-button {
     position: fixed;
-    top: 25vh !important;
+    bottom: 500px !important;
     right: 366px !important;
     display: inline-block;
     width: 40px !important;
