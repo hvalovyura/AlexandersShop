@@ -2,26 +2,50 @@
 @addTagHelper *, TagHelpersApp
 
 
-<span class="category-name">@ViewBag.String</span>
-<div class="row mt-5 mb-2">
+@*<span class="category-name">@ViewBag.String</span>*@
+<div>
     @{
-        foreach (var product in Model.AllProducts)
-        {
-        <div class="col-lg-5">
-            <img class="img-thumbnail" src="@product.ImagePath" />
-            <h2>@product.Name</h2>
-            <a class="nav-link" href="~/ProductPage/@product.Id">@product.Name</a>
-
-            @if (User.Identity.IsAuthenticated)
+        @*foreach (var product in Model.AllProducts)
             {
-            <form method="post" asp-controller="Home" asp-action="RemoveProduct">
-                <input type="text" name="id" placeholder="Id" value="@product.Id" hidden />
-                <input type="submit" value="Удалить" />
-            </form>
-            }
-        </div>
-                
-                          
+                <div class="col-lg-5">
+                    <img class="img-thumbnail" src="@product.ImagePath" />
+                    <h2>@product.Name</h2>
+                    <a class="nav-link" href="~/ProductPage/@product.Id">@product.Name</a>
+
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                    <form method="post" asp-controller="Home" asp-action="RemoveProduct">
+                        <input type="text" name="id" placeholder="Id" value="@product.Id" hidden />
+                        <input type="submit" value="Удалить" />
+                    </form>
+                    }
+                </div>
+            }*@
+        foreach (var category in Model.AllCategories)
+        {
+            <div class="category-item" onclick="onClickHandler(@category.Id)">
+                <h3>@category.Name</h3>
+            </div>
+            <div id="category-products-list-@category.Id" style="display:none">
+                @foreach (var product in Model.AllProducts)
+                {
+                    if (product.Category == category)
+                    {
+                        <div class="product-item">
+                            <h3>@product.Name</h3>
+                        </div>
+                    }
+                }
+            </div>
         }
     }
 </div>
+
+<script>
+    function onClickHandler (id) {
+        let element = document.querySelector("#category-products-list-" + id);
+        if (element.getAttribute("style") === "display:none") {
+            element.removeAttribute("style");
+        } else element.setAttribute("style", "display:none");
+    }
+</script>

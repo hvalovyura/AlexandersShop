@@ -27,8 +27,8 @@ iframe .content-page {
 }
 
 .content-page {
-    /* display: flex;*/
-    left: 210px;
+    margin-left: 200px;
+    margin-right: 200px;
     top: 100px;
     bottom: 50px;
 }
@@ -97,6 +97,14 @@ iframe .content-page {
     margin: 5px;
     background-color: forestgreen;
     display: none;
+    cursor: pointer;
+}
+
+
+.category-item {
+    width: inherit;
+    outline: 2px solid #000;
+    text-align: center;
     cursor: pointer;
 }
 

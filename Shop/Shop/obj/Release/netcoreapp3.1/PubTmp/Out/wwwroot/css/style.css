@@ -1,0 +1,146 @@
+﻿body {
+    background: #fcfcfc;
+}
+nav {
+    position: fixed !important;
+    height: 10% !important;
+    width: 100% !important;
+    background: #00ff21;
+    outline: 2px solid #000 !important;
+    z-index: 5;
+}
+.left-container {
+    position: fixed !important;    
+    bottom: 0px;
+    left: 0px;
+    float: left;
+    height: 90%;
+    width: 200px;
+    background: #00ff21;
+    text-align: center;
+    box-sizing: inherit;
+    outline: 2px solid #000 !important;
+}
+
+iframe .content-page {
+    left: 0px !important;
+}
+
+.content-page {
+    /* display: flex;*/
+    left: 210px;
+    top: 100px;
+    bottom: 50px;
+}
+
+.content-page span {
+    position: absolute;
+}
+
+.content-page img {
+    width: 400px;
+    height: 400px;
+}
+
+.widget-container {
+    position: fixed;
+    width: 235px !important;
+    height: 40px !important;
+    bottom: 20px;
+    right: 20px;
+}
+
+.widget-button-icon {
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    background-position-y: 10px;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+}
+
+.widget-button {
+    position: absolute;
+    width: 235px !important;
+    height: 40px !important;
+    background-color: forestgreen !important;
+    box-shadow: 0px 4px 12px rgba(223, 23, 20, 0.2) !important;
+    border-radius: 30px !important;
+    cursor: pointer;
+}
+
+
+#widget-frame {
+    position: fixed;
+    width: 350px;
+    height: 70vh;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+#close-button {
+    position: fixed;
+    top: 25vh !important;
+    right: 366px !important;
+    display: inline-block;
+    width: 40px !important;
+    height: 40px !important;
+    line-height: 42px;
+    border-radius: 30px;
+    margin: 5px;
+    background-color: forestgreen;
+    display: none;
+    cursor: pointer;
+}
+
+#close-button-text {
+    width: inherit;
+    height: inherit;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    background-position-y: 10px;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    display: inline-block;
+}
+
+a {
+    color: black !important;
+}
+
+li:hover {
+    background: #ffd800 !important;
+    color: red !important;
+}
+
+.contact-information {
+    outline: 2px solid #000 !important;
+    position: relative;
+}
+
+.category-list {
+    outline: 2px solid #000 !important;
+    position: relative;
+    height: 64vh;
+}
+
+footer {
+    display: none;
+    position: absolute;
+    left: 200px;
+}
+
+.img-thumbnail {
+    max-width: none !important;
+}
