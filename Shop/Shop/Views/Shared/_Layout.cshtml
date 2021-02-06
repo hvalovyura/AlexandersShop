@@ -40,37 +40,13 @@
                 </ul>
                 }
             </div>
-            <form class="form-inline mt-2 mt-md-0 dropright" asp-controller="Home" asp-action="List">
+            @*<form class="form-inline mt-2 mt-md-0 dropright" asp-controller="Home" asp-action="List">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="searchString">
                 <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="Поиск" />
-            </form>
+            </form>*@
         </nav>
     }
 <div class="row">
-    @*@if (!Url.PageLink().Contains("Message"))
-    {
-        <div class="left-container">
-            <div class="category-list">
-                <ul class="navbar-nav mr-auto">
-                    @{
-                        foreach (var el in Model.AllCategories)
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link" href="~/List/@el.Name">@el.Name</a>
-                            </li>
-                        }
-                    }
-                </ul>
-            </div>
-            <div class="contact-information">
-                <h3>Контакты</h3>
-                <h5>Телефон</h5>
-                <h5>+37529xxxxxxx</h5>
-                <h5>email</h5>
-                <h5>sobol@mail.ru</h5>
-            </div>
-        </div>
-    }*@
     @if (!Url.PageLink().Contains("Message/CompareMessage"))
     {
         <div class="content-page col">

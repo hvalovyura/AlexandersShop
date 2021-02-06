@@ -44,6 +44,7 @@ iframe .content-page {
 }
 
 .product-item-name {
+    white-space: pre-line;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,6 +55,7 @@ iframe .content-page {
 }
 
 .product-item-description {
+    white-space: pre-line;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,9 +67,6 @@ iframe .content-page {
 
 .product-item-image {
     position: absolute;
-    /*align-items: center;
-    justify-content: center;
-    position: relative;*/
     right: 0px;
     outline: 2px solid #000;
 }

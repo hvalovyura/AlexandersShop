@@ -150,5 +150,17 @@ namespace Shop.Controllers
             _content.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
+        public ActionResult RemoveCategory(int? id)
+        {
+            foreach (var element in _content.Product.Where(el => el.Category.Id == id))
+            {
+                _content.Product.Remove(element);
+            }
+            _content.Category.Remove(_content.Category.Where(el => el.Id == id).FirstOrDefault());            
+            _content.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

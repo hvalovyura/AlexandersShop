@@ -8,6 +8,13 @@
         {
             <div class="category-item" onclick="onClickHandler(@category.Id)">
                 <h3>@category.Name</h3>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form method="post" asp-controller="Home" asp-action="RemoveCategory">
+                        <input type="text" name="id" placeholder="Id" value="@category.Id" hidden />
+                        <input type="submit" value="Удалить" />
+                    </form>
+                }
             </div>
             <div id="category-products-list-@category.Id" style="display:none">
                 @foreach (var product in Model.AllProducts)
@@ -16,27 +23,25 @@
                     {
                     <div class="row product-item">
                         <div class="product-item-name">
-                            <h3>@product.Name</h3>
+                            <h4>@product.Name</h4>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <form method="post" asp-controller="Home" asp-action="RemoveProduct">
+                                    <input type="text" name="id" placeholder="Id" value="@product.Id" hidden />
+                                    <input type="submit" value="Удалить" />
+                                </form>
+                            }
                         </div>
                         <div class="product-item-description">
-                            <h3>@product.Description</h3>
+                            <h4>@product.Description</h4>
                         </div>                        
                         <div class="product-item-image">
                             <img class="img-thumbnail" src="@product.ImagePath" alt="@product.Name" />
                         </div>
                     </div>
-                        }
                     }
+                }
             </div>
         }
     }
 </div>
-
-<script>
-    function onClickHandler(id) {
-        let element = document.querySelector("#category-products-list-" + id);
-        if (element.getAttribute("style") === "display:none") {
-            element.removeAttribute("style");
-        } else element.setAttribute("style", "display:none");
-    }
-</script>
