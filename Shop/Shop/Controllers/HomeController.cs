@@ -43,6 +43,11 @@ namespace Shop.Controllers
             return View();
         }
 
+        public ActionResult Contacts()
+        {
+            return View();
+        }
+
         [Route("/List")]
         [Route("/List/{category}")]
         public ActionResult List(string category, string searchString)

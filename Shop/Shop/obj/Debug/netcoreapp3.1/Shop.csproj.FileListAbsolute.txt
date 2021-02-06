@@ -82,3 +82,4 @@ C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Message\CompareMessage.cshtml.g.cs
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Message\ShowMessages.cshtml.g.cs
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\scopedcss\bundle\Shop.styles.css
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contacts.cshtml.g.cs
