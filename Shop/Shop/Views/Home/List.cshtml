@@ -14,18 +14,26 @@
                 {
                     if (product.Category == category)
                     {
-                        <div class="product-item">
+                    <div class="row product-item">
+                        <div class="product-item-name">
                             <h3>@product.Name</h3>
                         </div>
+                        <div class="product-item-description">
+                            <h3>@product.Description</h3>
+                        </div>                        
+                        <div class="product-item-image">
+                            <img class="img-thumbnail" src="@product.ImagePath" alt="@product.Name" />
+                        </div>
+                    </div>
+                        }
                     }
-                }
             </div>
         }
     }
 </div>
 
 <script>
-    function onClickHandler (id) {
+    function onClickHandler(id) {
         let element = document.querySelector("#category-products-list-" + id);
         if (element.getAttribute("style") === "display:none") {
             element.removeAttribute("style");
