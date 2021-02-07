@@ -1,13 +1,22 @@
-﻿body {
+﻿#main-page-body {
     background: #fcfcfc;
+    background-image: url("../img/index-photo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#main-page-photo {
+    height: 100vh !important;
+    width: 100vh !important;
 }
 nav {
     position: fixed !important;
     height: 10% !important;
     width: 100% !important;
-    background: #00ff21;
-    outline: 2px solid #000 !important;
+    background-color: #373a3c;
     z-index: 5;
+}
+nav a {
+    color: white !important;
 }
 .left-container {
     position: fixed !important;    
@@ -25,10 +34,9 @@ nav {
 iframe .content-page {
     left: 0px !important;
 }
-
 .content-page {
-    /* display: flex;*/
-    left: 210px;
+    margin-left: 190px;
+    margin-right: 200px;
     top: 100px;
     bottom: 50px;
 }
@@ -36,10 +44,48 @@ iframe .content-page {
 .content-page span {
     position: absolute;
 }
+.product-item {
+    position: relative;
+    width: inherit;
+    outline: 2px solid #000;
+    margin-bottom: 10px;
+}
+.messages-container li {
+    white-space: pre-line;
+    outline: 2px solid #000;
+}
+.product-item-name {
+    white-space: pre-line;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+    width: 20%;
+    text-align: center;
+    outline: 2px solid #000;
+}
+
+.product-item-description {
+    white-space: pre-line;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+    width: 70%;
+    text-align: center;
+    outline: 2px solid #000;
+}
+
+.product-item-image {
+    position: absolute;
+    right: 0px;
+    outline: 2px solid #000;
+}
 
 .content-page img {
-    width: 400px;
-    height: 400px;
+    right: 0px;
+    width: 170px;
+    height: 170px;
 }
 
 .widget-container {
@@ -79,15 +125,19 @@ iframe .content-page {
 #widget-frame {
     position: fixed;
     width: 350px;
-    height: 70vh;
+    height: 520px;
     bottom: 20px;
     right: 20px;
     display: none;
 }
 
+.message-page {
+    margin-left: 25px !important;
+}
+
 #close-button {
     position: fixed;
-    top: 25vh !important;
+    bottom: 500px !important;
     right: 366px !important;
     display: inline-block;
     width: 40px !important;
@@ -97,6 +147,14 @@ iframe .content-page {
     margin: 5px;
     background-color: forestgreen;
     display: none;
+    cursor: pointer;
+}
+
+
+.category-item {
+    width: inherit;
+    outline: 2px solid #000;
+    text-align: center;
     cursor: pointer;
 }
 

@@ -49,36 +49,15 @@ namespace Shop.Controllers
         }
 
         [Route("/List")]
-        [Route("/List/{category}")]
-        public ActionResult List(string category, string searchString)
+        public ActionResult List()
         {
             ViewBag.String = "Все товары.";
-            string _category = category;
-            IEnumerable<Product> products = null;
-            string currCategory = "";
-            if(string.IsNullOrEmpty(category))
-            {
-                products = _products.Products.OrderBy(i => i.Id);
-            }
-            else
-            {
-                ViewBag.String = $" Категория - {category}. ";
-                products = _products.Products.Where(i => i.Category.Name.Equals(_category)).OrderBy(i => i.Id);
-                currCategory = _category;
-            }
 
             var productObj = new ProductsListViewModel
             {
-                AllProducts = products,
-                AllCategories = _categories.AllCategories,
-                CurrentCategory = currCategory
+                AllProducts = _products.Products.OrderBy(i => i.Id),
+                AllCategories = _categories.AllCategories.OrderBy(o => o.Id)
             };
-            if(!string.IsNullOrEmpty(searchString))
-            {
-                ViewBag.String += $" Поиск по запросу \"{searchString}\"";
-                productObj.AllProducts = productObj.AllProducts.Where(x => x.Name.ToLower().Contains(searchString.ToLower()));
-                ViewBag.String += productObj.AllProducts.Count() == 0 ? "не дал результатов." : ".";
-            }
 
             return View(productObj);
         }
@@ -125,7 +104,7 @@ namespace Shop.Controllers
             product.ImagePath = $"{path}";
             _content.Product.Add(product);
             _content.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("List");
         }
 
         [HttpGet]
@@ -145,7 +124,7 @@ namespace Shop.Controllers
         {
             _content.Category.Add(category);
             _content.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("List");
         }
 
         [HttpPost]
@@ -153,7 +132,7 @@ namespace Shop.Controllers
         {
             _content.Product.Remove(_content.Product.Where(el => el.Id == id).FirstOrDefault());
             _content.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("List");
         }
 
         [HttpPost]
@@ -161,11 +140,11 @@ namespace Shop.Controllers
         {
             foreach (var element in _content.Product.Where(el => el.Category.Id == id))
             {
-                _content.Product.Remove(element);
+                _content.Product.Remove(_content.Product.Where(el => el.Id == element.Id).FirstOrDefault());
             }
             _content.Category.Remove(_content.Category.Where(el => el.Id == id).FirstOrDefault());            
             _content.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("List");
         }
     }
 }
