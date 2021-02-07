@@ -1,15 +1,16 @@
-﻿<head>
-    <link href="~/css/style-mobile.css" rel="stylesheet" type="text/css" />
-</head>
-<style>
+﻿body {
+
+}
+@media screen and (max-device-width:480px) {
     html {
         height: 100%
     }
+
     body {
         /*width: 100% !important;*/
         height: 100% !important;
-        background-image: url(../../img/index-photo.jpg);
+        background-image: url(../../img/index-photo-mobile.jpg) !important;
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
-</style>
+}
