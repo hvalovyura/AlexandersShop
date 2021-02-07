@@ -125,25 +125,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/15/2018 13:29:44</publishTime>
     </File>
     <File Include="Shop.deps.json">
-      <publishTime>02/07/2021 04:46:12</publishTime>
+      <publishTime>02/07/2021 18:43:31</publishTime>
     </File>
     <File Include="Shop.dll">
-      <publishTime>02/07/2021 04:46:07</publishTime>
+      <publishTime>02/07/2021 18:43:24</publishTime>
     </File>
     <File Include="Shop.exe">
-      <publishTime>02/07/2021 04:46:07</publishTime>
+      <publishTime>02/07/2021 18:43:24</publishTime>
     </File>
     <File Include="Shop.pdb">
-      <publishTime>02/07/2021 04:46:07</publishTime>
+      <publishTime>02/07/2021 18:43:24</publishTime>
     </File>
     <File Include="Shop.runtimeconfig.json">
       <publishTime>01/25/2021 21:01:54</publishTime>
     </File>
     <File Include="Shop.Views.dll">
-      <publishTime>02/07/2021 04:46:08</publishTime>
+      <publishTime>02/07/2021 18:43:26</publishTime>
     </File>
     <File Include="Shop.Views.pdb">
-      <publishTime>02/07/2021 04:46:08</publishTime>
+      <publishTime>02/07/2021 18:43:26</publishTime>
     </File>
     <File Include="System.Collections.Immutable.dll">
       <publishTime>04/14/2020 22:38:40</publishTime>
@@ -164,13 +164,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/15/2018 13:29:44</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>02/07/2021 04:46:13</publishTime>
+      <publishTime>02/07/2021 18:43:32</publishTime>
     </File>
     <File Include="wwwroot/css/bootstrap.min.css">
       <publishTime>01/25/2021 20:32:18</publishTime>
     </File>
     <File Include="wwwroot/css/style.css">
-      <publishTime>02/07/2021 01:42:09</publishTime>
+      <publishTime>02/07/2021 18:05:30</publishTime>
     </File>
     <File Include="wwwroot/img/0">
       <publishTime>01/25/2021 20:32:18</publishTime>
