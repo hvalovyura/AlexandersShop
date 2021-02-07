@@ -15,6 +15,7 @@ C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcorea
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\20210207002750.jpg
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\20210207002821.jpg
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\20210207003214.jpg
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\20210207044324.jpg
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\DefaultImage.jpg
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\index-photo.jpg
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\_ADS0002.jpg

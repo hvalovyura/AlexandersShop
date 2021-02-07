@@ -140,11 +140,14 @@ namespace Shop.Controllers
         {
             foreach (var element in _content.Product.Where(el => el.Category.Id == id))
             {
-                _content.Product.Remove(_content.Product.Where(el => el.Id == element.Id).FirstOrDefault());
+                _content.Product.Remove(element);
             }
+            _content.SaveChanges();
             _content.Category.Remove(_content.Category.Where(el => el.Id == id).FirstOrDefault());            
             _content.SaveChanges();
             return RedirectToAction("List");
         }
+
+        
     }
 }
