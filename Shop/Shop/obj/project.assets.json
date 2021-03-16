@@ -6598,11 +6598,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Юрий\\Desktop\\AlexShop\\AlexandersShop\\Shop\\Shop\\Shop.csproj",
+      "projectUniqueName": "C:\\Users\\Юрий\\OneDrive\\Desktop\\AlexShop\\AlexandersShop\\Shop\\Shop\\Shop.csproj",
       "projectName": "Shop",
-      "projectPath": "C:\\Users\\Юрий\\Desktop\\AlexShop\\AlexandersShop\\Shop\\Shop\\Shop.csproj",
+      "projectPath": "C:\\Users\\Юрий\\OneDrive\\Desktop\\AlexShop\\AlexandersShop\\Shop\\Shop\\Shop.csproj",
       "packagesPath": "C:\\Users\\Юрий\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Юрий\\Desktop\\AlexShop\\AlexandersShop\\Shop\\Shop\\obj\\",
+      "outputPath": "C:\\Users\\Юрий\\OneDrive\\Desktop\\AlexShop\\AlexandersShop\\Shop\\Shop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

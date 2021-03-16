@@ -1,5 +1,6 @@
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\Shop.exe
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\bootstrap.min.css
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\style-mobile.css
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\css\style.css
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\0
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\20201230071932
@@ -17,6 +18,7 @@ C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcorea
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\20210207003214.jpg
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\20210207044324.jpg
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\DefaultImage.jpg
+C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\index-photo-mobile.jpg
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\index-photo.jpg
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\_ADS0002.jpg
 C:\Users\Юрий\Desktop\AlexShop\AlexandersShop\Shop\Shop\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\img\_ADS0071.jpg
